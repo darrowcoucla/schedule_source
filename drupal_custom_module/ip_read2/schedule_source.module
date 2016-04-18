@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+
+function schedule_source_menu() {
+  $items['ip2'] = array(
+    'title' => 'Schedule Source',
+    'page callback' => 'schedule_source',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * page callback
+ */
+function schedule_source(){
+	$nowIp = $_SERVER['REMOTE_ADDR'];
+	if( $nowIp=='192.168.177.1' ){
+		/// dhc: add get parameters here
+		$newURL = "http://www.ucla.edu";
+		header('Location: '.$newURL);
+	} else if( $nowIp=='164.67.152.25' ){ 
+		/// dhc: add get parameters here
+		$newURL = "http://www.ucsd.edu";
+		header('Location: '.$newURL);
+	} else{ 
+		/// dhc: add get parameters here
+		$newURL = "http://www.library.ucla.edu";
+		header('Location: '.$newURL);
+	}
+  exit;
+}
+

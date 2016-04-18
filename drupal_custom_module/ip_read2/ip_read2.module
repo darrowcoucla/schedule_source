@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+
+function ip_read2_menu() {
+  $items['ip2'] = array(
+    'title' => 'test results2',
+    'page callback' => 'test_page2',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * page callback
+ */
+function test_page2(){
+	$nowIp = $_SERVER['REMOTE_ADDR'];
+	if( $nowIp=='192.168.177.1' ){
+		/// dhc: add get parameters here
+		$newURL = "http://www.ucla.edu";
+		header('Location: '.$newURL);
+	} else if( $nowIp=='164.67.152.25' ){ 
+		/// dhc: add get parameters here
+		$newURL = "http://www.ucsd.edu";
+		header('Location: '.$newURL);
+	} else{ 
+		/// dhc: add get parameters here
+		$newURL = "http://www.library.ucla.edu";
+		header('Location: '.$newURL);
+	}
+  exit;
+}
+
