@@ -18,6 +18,7 @@ myAppModule.controller('myAppController', function($scope,calculateService,$http
 myAppModule.factory('calculateService', function($window,$http){
   return {
     calculate: function(xval,yval,ip){
+//      $window.location.href='https://www-test.library.ucla.edu/schedule_source'
       $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source'
     }  
   };             
