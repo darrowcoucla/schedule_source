@@ -41,26 +41,26 @@
 *************************************************************************************************************/
 
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
 //    Uncomment one of the following "//// var option = ..." lines to set the page type (comment out the other 2)
-//
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 //    AUTO --- Automatic Redirect to Schedule Source
+////////////////////////////////////////////////////
+////var option = 'auto';           // Change the 1 Work location-department-unit on the next line (this works for the auto redirect only!!!)
+////var auto_work_loc = "dept_1";  // Set the Work location-department-unit for the auto-redirect
 
-//// var option = 'auto';       // Change the 1 Work location-department-unit on the next line (this works for the auto redirect only!!!)
-//// var auto_work_loc = "dept_1";  // Set the Work location-department-unit for the auto-redirect
 
 
 //    1 BUTTON --- Display a page with a 1 button
+/////////////////////////////////////////////////
+////var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
 
-//// var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
 
 
-//  8 BUTTONS --- Display a page with a 8 buttons
-
+//    8 BUTTONS --- Display a page with a 8 buttons
+/////////////////////////////////////////////////
 var option = '8button';   // To change the 8 Work locations-departments-units, see below in the "8button Section"
+
 
 /****************************************************************************************************************
 *
@@ -109,7 +109,7 @@ var option = '8button';   // To change the 8 Work locations-departments-units, s
 
 	<div class="boxes" id="1button" style="display: none">
 			<p style="font-size:28px;">Click the button to go to ScheduleSource:</p>
-			<button class="button" ng-click="calculateQuantity('dept_1')">ScheduleSource</button>
+			<button class="button1" ng-click="calculateQuantity('dept_1')">ScheduleSource</button>
 	</div>
 
 
