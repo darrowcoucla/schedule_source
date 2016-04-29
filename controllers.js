@@ -15,8 +15,7 @@ myAppModule.controller('myAppController', function($scope,$document,calculateSer
   $scope.calculateQuantity = function(work_loc) {
   $scope.work_loc = work_loc;
 
-
- alert(work_loc);
+  // alert(work_loc);
 
    $scope.quantityResult = calculateService.calculate($scope.work_loc);
   };

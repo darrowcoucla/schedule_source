@@ -12,54 +12,63 @@
 
   <script type="text/javascript" charset="utf-8">
 
-  /***************************************************************************************************************/
-  /***************************************************************************************************************/
-  /****************************************************************************************************************
-  *
-  * Set the Page type here
-  *
-  *    auto             - automatically displays the Schedule Source page for a particular department. See choices
-  *    1button          - displays a page with 1 button. Click on the button to go to the Schedule Source page
-  *    8button          - displays a page with 8 buttons. Click on the button that matches the desired category
-  *                        to go to the Schedule Source page
-  *
-  * Set the location-department-unit after this section in either the 1button or 8button section
-  *
-  *    Choices for Work Location:
-  *     (insert these below in the 1button or 8button section)
-  *     (contact DIIT to add new departments)
-  *      dept_1 ===> Powell
-  *      dept_2 ===> Clicc
-  *      dept_3 ===> Office
-  *      dept_4 ===> Office
-  *      dept_5 ===> Office
-  *      dept_6 ===> Office
-  *      dept_7 ===> Office
-  *      dept_8 ===> Office
-  *      dept_9 ===> Office
-  *
-  *************************************************************************************************************/
-  
-//  Uncomment one of the following "var option = " lines to set the page type
-//   (comment out the other 2)
+/***************************************************************************************************************/
+/***************************************************************************************************************/
+/****************************************************************************************************************
+*
+* Set the Page type here
+*
+*    auto             - automatically displays the Schedule Source page for a particular department. See choices
+*    1button          - displays a page with 1 button. Click on the button to go to the Schedule Source page
+*    8button          - displays a page with 8 buttons. Click on the button that matches the desired category
+*                        to go to the Schedule Source page
+*
+* Set the location-department-unit after this section in either the 1button or 8button section
+*
+*    Choices for Work Location:
+*     (insert these below in the 1button or 8button section)
+*     (contact DIIT to add new departments)
+*      dept_1 ===> Clicc
+*      dept_2 ===> Access Services
+*      dept_3 ===> Administrative Services
+*      dept_4 ===> Event and Performance
+*      dept_5 ===> Inquiry Labs
+*      dept_6 ===> Outreach Program
+*      dept_7 ===> Overnight
+*      dept_8 ===> Social Media
+*      dept_9 ===> Special Projects
+*
+*************************************************************************************************************/
 
-//  AUTO --- Automatic Redirect to Schedule Source
-//    var option = 'auto';       // Change the 1 Work location-department-unit on the next line (this works for the auto redirect only!!!)
-//    var auto_work_loc = "dept_1";  // Set the Work location-department-unit for the auto-redirect
 
-//  1 BUTTON --- Display a page with a 1 button
-//    var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//    Uncomment one of the following "//// var option = ..." lines to set the page type (comment out the other 2)
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//    AUTO --- Automatic Redirect to Schedule Source
+
+//// var option = 'auto';       // Change the 1 Work location-department-unit on the next line (this works for the auto redirect only!!!)
+//// var auto_work_loc = "dept_1";  // Set the Work location-department-unit for the auto-redirect
+
+
+//    1 BUTTON --- Display a page with a 1 button
+
+//// var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
+
 
 //  8 BUTTONS --- Display a page with a 8 buttons
-    var option = '8button';   // To change the 8 Work locations-departments-units, see below in the "8button Section"
 
-  /****************************************************************************************************************
-  *
-  * End of Set the Page type here
-  *
-  *************************************************************************************************************/
-  /************************************************************************************************************/
-  /************************************************************************************************************/
+var option = '8button';   // To change the 8 Work locations-departments-units, see below in the "8button Section"
+
+/****************************************************************************************************************
+*
+* End of Set the Page type here
+*
+*************************************************************************************************************/
+/************************************************************************************************************/
+/************************************************************************************************************/
 
 
   </script>
@@ -100,7 +109,7 @@
 
 	<div class="boxes" id="1button" style="display: none">
 			<p style="font-size:28px;">Click the button to go to ScheduleSource:</p>
-			<button class="button" ng-click="calculateQuantity('dept_2')">ScheduleSource</button>
+			<button class="button" ng-click="calculateQuantity('dept_1')">ScheduleSource</button>
 	</div>
 
 
@@ -114,24 +123,24 @@
 		<table width=100% border=0>
 			<tr align=center><td colspan=3><p style="font-size:28px;">Click the button to go to ScheduleSource:</p></td></tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_1')">ScheduleSource1</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_2')">ScheduleSource2</button></td>
-				<td align=left><button class="button" ng-click="calculateQuantity('dept_3')">ScheduleSource3</button></td>
+				<td align=right><button class="button" ng-click="calculateQuantity('dept_2')">Access Services</button></td>
+				<td align=center><button class="button" ng-click="calculateQuantity('dept_3')">Administrative Services</button></td>
+				<td align=left><button class="button" ng-click="calculateQuantity('dept_4')">Event and Performance</button></td>
 			</tr>
 			<tr align=center nowrap>
 				<td>&nbsp;</td>
 			</tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_4')">ScheduleSource4</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_5')">ScheduleSource5</button></td>
-				<td align=left><button class="button" ng-click="calculateQuantity('dept_6')">ScheduleSource6</button></td>
+				<td align=right><button class="button" ng-click="calculateQuantity('dept_5')">Inquiry Labs</button></td>
+				<td align=center><button class="button" ng-click="calculateQuantity('dept_6')">Outreach Program</button></td>
+				<td align=left><button class="button" ng-click="calculateQuantity('dept_7')">Overnight</button></td>
 			</tr>
 			<tr align=center nowrap>
 				<td>&nbsp;</td>
 			</tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_7')">ScheduleSource7</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_8')">ScheduleSource8</button></td>
+				<td align=right><button class="button" ng-click="calculateQuantity('dept_8')">Social Media</button></td>
+				<td align=center><button class="button" ng-click="calculateQuantity('dept_9')">Special Projects</button></td>
 				<td align=left>&nbsp;</td>
 			</tr>
 		</table>
