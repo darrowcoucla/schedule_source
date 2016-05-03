@@ -25,9 +25,8 @@ myAppModule.controller('myAppController', function($scope,$document,calculateSer
 myAppModule.factory('calculateService', function($window,$http){
   return {
     calculate: function(work_loc){
-//      $window.location.href='https://www-test.library.ucla.edu/schedule_source'
-
-      $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+work_loc
+      $window.location.href='https://www-test.library.ucla.edu/schedule_source?work_loc='+work_loc
+//      $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+work_loc
     }  
   };             
 });
