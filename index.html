@@ -12,13 +12,30 @@
 
   <script type="text/javascript" charset="utf-8">
 
-/***************************************************************************************************************/
-/***************************************************************************************************************/
 /****************************************************************************************************************
-*
-* Set the Page type here
-*
-*    auto             - automatically displays the Schedule Source page for a particular department. See choices
+ *
+ * Set the Page type here
+ *
+ */
+
+
+
+// var option = 'auto';
+// var auto_work_loc = "dept_1";
+
+var option = '1button';
+
+//var option = '8button';
+
+
+
+/****************************************************************************************************************
+ *
+ * Details
+ *
+ */
+
+/*   auto             - automatically displays the Schedule Source page for a particular department. See choices
 *    1button          - displays a page with 1 button. Click on the button to go to the Schedule Source page
 *    8button          - displays a page with 8 buttons. Click on the button that matches the desired category
 *                        to go to the Schedule Source page
@@ -40,7 +57,6 @@
 *
 *************************************************************************************************************/
 
-
 //    Uncomment one of the following "//// var option = ..." lines to set the page type (comment out the other 2)
 
 
@@ -53,7 +69,7 @@
 
 //    1 BUTTON --- Display a page with a 1 button
 /////////////////////////////////////////////////
-var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
+////var option = '1button';   // To change the 1 Work location-department-unit, see below in the "1button Section"
 
 
 
@@ -63,10 +79,10 @@ var option = '1button';   // To change the 1 Work location-department-unit, see 
 
 
 /****************************************************************************************************************
-*
-* End of Set the Page type here
-*
-*************************************************************************************************************/
+ *
+ * End of Set the Page type here
+ *
+ ************************************************************************************************************/
 /************************************************************************************************************/
 /************************************************************************************************************/
 
@@ -75,20 +91,20 @@ var option = '1button';   // To change the 1 Work location-department-unit, see 
 
   <script type="text/javascript">
     $(document).ready(function() {
-			$('.boxes').hide();
+			$('.buttons').hide();
 			$('#' + option).show();
 		});
   </script>
 
   <style type="text/css">
-    .boxes {
+    .buttons {
       display: none;
     }
   </style>
 </head>
 
-<body ng-app="myAppModule">
-  <div ng-controller="myAppController" style="text-align:center">
+<body ng-app="scheduleAppModule">
+  <div ng-controller="scheduleAppController" style="text-align:center">
 
 <!-------------------------------------------------------------------------------------------------------------------------
 *
@@ -96,51 +112,51 @@ var option = '1button';   // To change the 1 Work location-department-unit, see 
 *
 --------------------------------------------------------------------------------------------------------------------------->
 
-	<div class="boxes" id="auto" style="display: none">
+	<div class="buttons" id="auto" style="display: none">
 		auto-page
 	</div>
 
 
 <!-------------------------------------------------------------------------------------------------------------------------
 *
-*    Display 1 Button. Set the 1 Work Location-department-unit below like this "calculateQuantity('dept_1')"
+*    Display 1 Button. Set the 1 Work Location-department-unit below like this "deptUsed('dept_1')"
 *
 --------------------------------------------------------------------------------------------------------------------------->
 
-	<div class="boxes" id="1button" style="display: none">
+	<div class="buttons" id="1button" style="display: none">
 			<p style="font-size:28px;">Click the button to go to ScheduleSource:</p>
-			<button class="button1" ng-click="calculateQuantity('dept_1')">ScheduleSource</button>
+			<button class="button1" ng-click="deptUsed('dept_1')">ScheduleSource</button>
 	</div>
 
 
 <!-------------------------------------------------------------------------------------------------------------------------
 *
-*    Display 8 Buttons. Set the 1 Work Location-department-unit below like this "calculateQuantity('dept_1')", etc
+*    Display 8 Buttons. Set the 1 Work Location-department-unit below like this "deptUsed('dept_1')", etc
 *
 --------------------------------------------------------------------------------------------------------------------------->
 
-	<div class="boxes" id="8button" style="display: none">
+	<div class="buttons" id="8button" style="display: none">
 		<table width=100% border=0>
 			<tr align=center><td colspan=3><p style="font-size:28px;">Click the button to go to ScheduleSource:</p></td></tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_2')">Access Services</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_3')">Administrative Services</button></td>
-				<td align=left><button class="button" ng-click="calculateQuantity('dept_4')">Event and Performance</button></td>
+				<td align=right><button class="button" ng-click="deptUsed('dept_2')">Access Services</button></td>
+				<td align=center><button class="button" ng-click="deptUsed('dept_3')">Administrative Services</button></td>
+				<td align=left><button class="button" ng-click="deptUsed('dept_4')">Event and Performance</button></td>
 			</tr>
 			<tr align=center nowrap>
 				<td>&nbsp;</td>
 			</tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_5')">Inquiry Labs</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_6')">Outreach Program</button></td>
-				<td align=left><button class="button" ng-click="calculateQuantity('dept_7')">Overnight</button></td>
+				<td align=right><button class="button" ng-click="deptUsed('dept_5')">Inquiry Labs</button></td>
+				<td align=center><button class="button" ng-click="deptUsed('dept_6')">Outreach Program</button></td>
+				<td align=left><button class="button" ng-click="deptUsed('dept_7')">Overnight</button></td>
 			</tr>
 			<tr align=center nowrap>
 				<td>&nbsp;</td>
 			</tr>
 			<tr align=center nowrap>
-				<td align=right><button class="button" ng-click="calculateQuantity('dept_8')">Social Media</button></td>
-				<td align=center><button class="button" ng-click="calculateQuantity('dept_9')">Special Projects</button></td>
+				<td align=right><button class="button" ng-click="deptUsed('dept_8')">Social Media</button></td>
+				<td align=center><button class="button" ng-click="deptUsed('dept_9')">Special Projects</button></td>
 				<td align=left>&nbsp;</td>
 			</tr>
 		</table>
