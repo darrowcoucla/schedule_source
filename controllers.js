@@ -9,7 +9,8 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
   $scope.myWelcome = 0;
 
   if( $window.option == "auto" ){
-    $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+$window.auto_work_loc;
+    $window.location.href='https://www.library.ucla.edu/schedule_source?work_loc='+work_loc
+//    $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+$window.auto_work_loc;
   }
 
   $scope.deptUsed = function(work_loc) {
@@ -22,7 +23,7 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
 scheduleAppModule.factory('moduleService', function($window,$http){
   return {
     redirect: function(work_loc){
-      $window.location.href='https://www-test.library.ucla.edu/schedule_source?work_loc='+work_loc
+      $window.location.href='https://www.library.ucla.edu/schedule_source?work_loc='+work_loc
 //      $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+work_loc
     }  
   };             
