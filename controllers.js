@@ -12,7 +12,7 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
       var ppp = $window.open("https://www.library.ucla.edu/schedule_source?work_loc=+$window.auto_work_loc", "_blank", "width=600,height=400,left=10,top=150");
       setTimeout(function(){
         ppp.close();
-      },2000);
+      },30000);
 //    $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+$window.auto_work_loc;
   }
 
@@ -29,7 +29,7 @@ scheduleAppModule.factory('moduleService', function($window,$http){
       var ppp = $window.open("https://www.library.ucla.edu/schedule_source?work_loc=+work_loc", "_blank", "width=600,height=400,left=10,top=150");
       setTimeout(function(){
         ppp.close();
-      },2000);
+      },30000);
 
 //      $window.location.href='http://uclalib.local/UCLALIB/www/schedule_source?work_loc='+work_loc
     }  
