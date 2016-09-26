@@ -9,7 +9,7 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
   $scope.myWelcome = 0;
 
   if( $window.option == "auto" ){
-      var ppp = $window.open("https://www-test.library.ucla.edu/schedule_source?work_loc=+$window.auto_work_loc", "_blank", "width=600,height=400,left=10,top=150");
+      var ppp = $window.open("https://www.library.ucla.edu/schedule_source?work_loc=+$window.auto_work_loc", "_blank", "width=600,height=400,left=10,top=150");
       setTimeout(function(){
         ppp.close();
       },2000);
@@ -26,7 +26,7 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
 scheduleAppModule.factory('moduleService', function($window,$http){
   return {
     redirect: function(work_loc){
-      var ppp = $window.open("https://www-test.library.ucla.edu/schedule_source?work_loc=+work_loc", "_blank", "width=600,height=400,left=10,top=150");
+      var ppp = $window.open("https://www.library.ucla.edu/schedule_source?work_loc=+work_loc", "_blank", "width=600,height=400,left=10,top=150");
       setTimeout(function(){
         ppp.close();
       },2000);
