@@ -28,7 +28,7 @@ scheduleAppModule.factory('moduleService', function($window,$http){
   return {
     redirect: function(work_loc){
       var url_dept ='https://www.library.ucla.edu/schedule_source?work_loc='+work_loc;
-      var ppp = $window.open(url_dept, "_blank", "width=600,height=400,left=10,top=150");
+      var ppp = $window.open(url_dept, "_blank", "width=750,height=800,left=10,top=150");
       setTimeout(function(){
         ppp.close();
       },30000);
