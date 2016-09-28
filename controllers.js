@@ -10,7 +10,7 @@ scheduleAppModule.controller('scheduleAppController', function($scope,$document,
 
   if( $window.option == "auto" ){
       var url_dept ='https://www.library.ucla.edu/schedule_source?work_loc='+$window.auto_work_loc;
-      var ppp = $window.open(url_dept, "_blank", "width=600,height=400,left=10,top=150");
+      var ppp = $window.open(url_dept, "_blank", "width=750,height=800,left=10,top=150");
       setTimeout(function(){
         ppp.close();
       },30000);
